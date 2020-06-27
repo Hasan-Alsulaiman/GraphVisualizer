@@ -1,92 +1,81 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>umit 2.2</title>
-  
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+  <title>Graph Visualizer</title>
+
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
 
 
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.0/sigma.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
 
   <script src="https://cdn.jsdelivr.net/sigma.js/1.0.2/plugins/sigma.layout.forceAtlas2.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.0/plugins/sigma.parsers.json.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.0/plugins/sigma.renderers.edgeLabels.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.0/plugins/sigma.parsers.json.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/sigma.js/1.2.0/plugins/sigma.renderers.edgeLabels.min.js"></script>
   <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
-<script src="plugins/sigma.exporters.svg/sigma.exporters.svg.js"></script>
+  <script src="plugins/sigma.exporters.svg/sigma.exporters.svg.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✌</text></svg>">
 
 
 
 </head>
+
 <body>
-  
 
-<nav class="navbar navbar-expand navbar-light bg-light">
-  <a class="navbar-brand" href="#">Umit</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">About</a>
-      <a class="nav-item nav-link" href="#">Example</a>
-      <a class="nav-item nav-link disabled" href="#">Contact</a>
-    </div>
-  </div>
-</nav>
 
-<!-- <div class="container my-container">
-    <div class="row my-row">this isn't doing anything for now. </div>
-</div> -->
-  
-<div class="grid">
-  <div class="item-a">  
-<!--card  -->
-  <div class="card" >
- 
-  <div class="card-body">
-    <h5 class="card-title">ProVisTool</h5>
-    <p class="card-text">Biological network visualization based on protein-protein interactions.content.</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">
-      <!-- toggle -->
-<div class="custom-control custom-switch">
-  <input type="checkbox" class="custom-control-input" id="customSwitches" onchange="isToggle()">
-  <label class="custom-control-label" for="customSwitches">Toggle ForceAtlas</label>
-</div>
-    </li>
-    <li class="list-group-item" >Names: 
-      <p id="nodeName"><p> </li>
+  <div class="grid">
+    <div class="item-a">
+      <!--card  -->
+      <div class="card">
 
-<!-- export button -->
-    <li onclick="snap()" class="list-group-item"><button  type="button" class="btn btn-dark btn-sm"  >export</button></li>
-    
-    
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
-  <div class="card-body">
-     <img class="card-img-top" src="https://pbs.twimg.com/profile_images/1074753128287924224/1I5RO1gc_400x400.jpg" alt="Card image cap">
-    </div>
-</div>
+        <div class="card-body">
+          <h5 class="card-title">Graph Visualizer</h5>
+          <p class="card-text">A tool to visualize network-graphs in the browser.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <!-- toggle -->
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="customSwitches" onchange="isToggle()">
+              <label class="custom-control-label" for="customSwitches">Force-layout</label>
+            </div>
+          </li>
+          <!-- export button -->
+          <li onclick="snap()" class="list-group-item"><button type="button" class="btn btn-dark btn-sm">export</button>
+          </li>
+          <li class="list-group-item">Names:
+            <p id="nodeName">
+            <p>
+          </li>
+
+
+
+
+        </ul>
+        <div class="card-body">
+          <a href="https://github.com/Hasan-Alsulaiman" class="card-link">Creator's Github 😊</a>
+        </div>
+
+      </div>
     </div>
 
 
-<div class="item-b">
+    <div class="item-b">
 
-<!-- sigmaJS visualization -->
-  <div id=sigma-container></div>
-</div>
-</div>
+      <!-- sigmaJS visualization -->
+      <div id=sigma-container></div>
+    </div>
+  </div>
 
 
 
@@ -94,7 +83,6 @@
 
 </body>
 <!-- our script -->
-<script  src="./script.js"></script>
+<script src="./script.js"></script>
+
 </html>
-
-

@@ -1,0 +1,15 @@
+click node
+find neighbours 
+add to list
+find number of neighbours
+enumerate the neighbours calling the previuos steps over
+if no neighbour is found return
+
+get nodeID
+visited = nodeID
+toKeep = all neighbours of (nodeID)
+loop over toKeep
+    if the grabbed neighbour node hasnt been visited AND it is not an end node
+        repeat above function
+    else
+        return

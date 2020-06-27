@@ -2,37 +2,65 @@
     "nodes": [
       {
         "id": "n0",
-        "label": "A node",
+        "label": "zero ",
         "x": 0,
         "y": 0,
-        "size": 0.1
+        "size": 1
       },
       {
         "id": "n1",
-        "label": "A node",
+        "label": "one ",
         "x": 0,
         "y": 1.1,
         "size": 0.5
       },
       {
         "id": "n2",
-        "label": "A node",
+        "label": "two ",
         "x": 1.5,
         "y": 0,
         "size": 0.5
       },
       {
         "id": "n3",
-        "label": "Another node",
+        "label": "three ",
         "x": 3,
         "y": 1,
         "size": 0
       },
       {
         "id": "n4",
-        "label": "Another node",
+        "label": "four ",
         "x": 2,
         "y": 1,
+        "size": 0.7
+      },
+      {
+        "id": "n5",
+        "label": "five ",
+        "x": 1.2,
+        "y": 0.4,
+        "size": 0.7
+      },
+      {
+        "id": "n6",
+        "label": "six ",
+        "x": 1.4,
+        "y": 0.8,
+        "size": 0.7
+      },
+      {
+        "id": "n7",
+        "label": "seven ",
+        "x": 1.5,
+        "y": 0.8,
+        "size": 0.7
+      },
+      {
+        "id": "n8",
+        "label": "eight ",
+        "x": -0.5,
+        "y": -0.1,
         "size": 0.7
       }
 
@@ -47,6 +75,26 @@
         "id":"e1",
         "source":"n4",
         "target":"n1"
+      },
+      {
+        "id":"e2",
+        "source":"n5",
+        "target":"n1"
+      },
+      {
+        "id":"e3",
+        "source":"n5",
+        "target":"n6"
+      },
+      {
+        "id":"e4",
+        "source":"n6",
+        "target":"n7"
+      },
+      {
+        "id":"e5",
+        "source":"n0",
+        "target":"n8"
       }
     ]
   }
