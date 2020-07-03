@@ -1,5 +1,6 @@
-
-
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
 
 // function to get the nieghbour nodes
 sigma.classes.graph.addMethod('neighbors', function (nodeId) {
@@ -23,13 +24,25 @@ s = new sigma({
     defaultEdgeColor: '#fcdf03',
     defaultNodeColor: "#F23D3D"
   },
-
-
-
 });
-// the graph function
+// we call the data picker function to pick a graph and display it
+dataPicker()
+
+
+//data to graph
+var data = "data.json"
+var dataChange = true
+function dataPicker(){
+  if(dataChange){
+    var data = "mediumData.json"
+  }else{
+    var data = "data.json"
+
+  }
+  dataChange = !dataChange
+  // the graph function
 sigma.parsers.json(
-  'mediumData.json',
+  data,
   s,
   // function to color only the clicked node and its nieghbours
   function picker(s) {
@@ -130,6 +143,9 @@ sigma.parsers.json(
   }
 
 );
+}
+
+
 
 
 
@@ -169,3 +185,6 @@ function snap() {
 
 console.log(Object.keys(s.graph.neighbors("POLR2H ")).length)
 console.log(s.graph.degree("POLR2H "))
+console.log(typeof(mainFunction));
+console.log("hi");
+
